@@ -10,7 +10,16 @@ namespace InAndOut.Controllers
     {
         public IActionResult Index()
         {
+            //string todaysDate = DateTime.Now.ToShortDateString();
+            //return Ok(todaysDate);
+
+
             return View();
+        }
+
+        public IActionResult Details(int id)
+        {
+            return Ok("You have enttered id = " + id);
         }
     }
 }
