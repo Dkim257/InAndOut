@@ -22,5 +22,22 @@ namespace InAndOut.Controllers
             IEnumerable<Item> objLst = _db.Items;
             return View(objLst);
         }
+
+        // GET-Create
+        public IActionResult Create()
+        {
+
+            return View();
+        }
+
+        // POST-Create
+        [HttpPost]
+        [ValidateAntiForgeryToken] // only allowed for signed in user
+        public IActionResult Create(Item obj)
+        {
+            _db.Items.Add(obj);
+            _db.SaveChanges();  // needed for security
+            return RedirectToAction("Index");
+        }
     }
 }
