@@ -17,6 +17,6 @@
     <Folder Include="Views\Appointment\" />
     <Folder Include="Data\" />
     <Folder Include="Views\Item\" />
-    <Folder Include="Views\Item %28copy%29\" />
+    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
 </Project>
